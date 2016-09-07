@@ -89,7 +89,7 @@ fullTexts:
 "Here is what {SUBMITTER} didn’t want you to know about {REPO}",
 "This patch by {SUBMITTER} might be just what you needed today!",
 "{REPO} fans are all insane about this patch by {SUBMITTER}",
-"{SUBMITER} posted a patch to {REPO} and it’s just... wow! (soo patch!)";
+"{SUBMITTER} posted a patch to {REPO} and it’s just... wow! (soo patch!)";
 
 
 
