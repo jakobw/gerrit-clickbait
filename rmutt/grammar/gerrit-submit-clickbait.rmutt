@@ -27,6 +27,10 @@ v1Verb:
 "fixed in",
 "put in",
 "sneaked into",
+"added to",
+"contributed to",
+"committed to",
+"made in",
 "hacked in",
 "messed up in";
 
@@ -43,6 +47,19 @@ adjective:
 "predictive",
 "tiny",
 "crazy",
+"amazing",
+"awesome",
+"radical",
+"silly",
+"perfect",
+"great",
+"kind of ok",
+"mildly amusing",
+"terrific",
+"fantastic",
+"awe-inspiring",
+"really interesting",
+"kind of boring",
 "mental",
 "huge",
 "astonishing",
@@ -53,7 +70,6 @@ thingObject:
 "stuff",
 "things",
 "changes",
-"pile of code",
 "foobar" 0.05;
 
 changes:
