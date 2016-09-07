@@ -21,7 +21,7 @@ foreach ($users as $user) {
         // filter out changes that the user has been notified for before
         if (!in_array($change['change_id'], @$db['known'][$user['name']] ?: [])) {
             echo "Send mail to ${user['email']}\n";
-            echo shell_exec(__DIR__ . '/rmutt/bin/clickbait ' . $change['owner']['name'] . ' ' . $change['project']);
+            echo shell_exec(__DIR__ . '/rmutt/bin/clickbait "' . $change['owner']['name'] . '" "' . $change['project'] . '"');
             echo "####################################\n";
 
             $db['known'][$user['name']][] = $change['change_id'];
