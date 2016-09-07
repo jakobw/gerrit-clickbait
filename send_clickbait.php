@@ -13,7 +13,7 @@ $users = $config['users'];
 
 foreach ($users as $user) {
     // get open changes where the user is a reviewer
-    $gerritData = file_get_contents($gerritUrl . "changes/?q=is:open+reviewer:${user['name']}&o=DETAILED_ACCOUNTS");
+    $gerritData = file_get_contents($gerritUrl . "changes/?q=is:open+reviewer:${user['email']}&o=DETAILED_ACCOUNTS");
     $gerritData = substr($gerritData, strpos($gerritData, "\n") + 1); // first line is weird
     $openChanges = json_decode($gerritData, true);
 
