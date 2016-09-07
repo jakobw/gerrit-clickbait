@@ -1,11 +1,11 @@
 #! /usr/bin/env node
-var submitter = process.argv[2] ? process.argv[2] : 'NOSUBMITTER',
-	repo = process.argv[3] ? process.argv[3] : 'NOREPO',
+var submitter = process.argv[2] || 'NOSUBMITTER',
+	repo = process.argv[3] || 'NOREPO',
 	rmutt = require( 'rmutt' ),
 	fs = require( 'fs' ),
 	grammar;
 
-grammar = fs.readFile( 'grammar/gerrit-submit-clickbait.rmutt', 'utf8', function( err, grammar ) {
+grammar = fs.readFile( __dirname + '/../grammar/gerrit-submit-clickbait.rmutt', 'utf8', function( err, grammar ) {
 	if ( err ) {
 		return console.log( err );
 	}
