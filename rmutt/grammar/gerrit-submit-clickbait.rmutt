@@ -13,13 +13,13 @@ preText:
 var1: v1Starter " the " adjective " " thingObject  " {SUBMITTER} " v1Verb " {REPO}!";
 
 v1Starter:
-"You wont belive",
+"You wont believe",
 "Hold on and see",
-"Unbeliveable",
+"Unbelievable",
 "Just crazy",
 "Everyone is excited about",
 "Test now",
-"Dont get mad about";
+"Don't get mad about";
 
 v1Verb:
 "did to",

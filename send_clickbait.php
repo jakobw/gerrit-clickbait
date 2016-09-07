@@ -13,7 +13,7 @@ $users = $config['users'];
 
 foreach ($users as $user) {
     // get open changes where the user is a reviewer
-    $gerritData = file_get_contents($gerritUrl . "changes/?q=is:open+reviewer:${user['name']}&o=DETAILED_ACCOUNTS");
+    $gerritData = file_get_contents($gerritUrl . "changes/?q=is:open+reviewer:${user['email']}&o=DETAILED_ACCOUNTS");
     $gerritData = substr($gerritData, strpos($gerritData, "\n") + 1); // first line is weird
     $openChanges = json_decode($gerritData, true);
 
@@ -21,7 +21,7 @@ foreach ($users as $user) {
         // filter out changes that the user has been notified for before
         if (!in_array($change['change_id'], @$db['known'][$user['name']] ?: [])) {
             echo "Send mail to ${user['email']}\n";
-            echo shell_exec(__DIR__ . '/rmutt/bin/clickbait ' . $change['owner']['name'] . ' ' . $change['project']);
+            echo shell_exec(__DIR__ . '/rmutt/bin/clickbait "' . $change['owner']['name'] . '" "' . $change['project'] . '" ' . date('Y'));
             echo "####################################\n";
 
             $db['known'][$user['name']][] = $change['change_id'];
