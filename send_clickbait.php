@@ -33,7 +33,7 @@ foreach ($users as $user) {
             echo "$message\n";
             echo "- https://gerrit.wikimedia.org/r/#/q/${change['change_id']},n,z";
             echo "\n\n";
-            sleep(5);
+            sleep(7);
             $db['known'][$user['name']][] = $change['change_id'];
         }
     }
