@@ -1,4 +1,4 @@
-Output: submitClickBait ".\n";
+Output: submitClickBait "!";
 
 submitClickBait: var1, var2;
 
