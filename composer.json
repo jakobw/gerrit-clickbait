@@ -1,0 +1,8 @@
+{
+    "name": "wmde/gerrit-clickbait",
+    "authors": [
+    ],
+    "require": {
+        "symfony/yaml": "~3.1",
+    }
+}

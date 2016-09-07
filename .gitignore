@@ -1,2 +1,6 @@
 .idea/
 rmutt/node_modules/
+config.yml
+db.json
+composer.lock
+/vendor/
