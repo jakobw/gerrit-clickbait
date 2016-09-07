@@ -20,10 +20,20 @@ foreach ($users as $user) {
     foreach ($openChanges as $change) {
         // filter out changes that the user has been notified for before
         if (!in_array($change['change_id'], @$db['known'][$user['name']] ?: [])) {
-            echo "Send mail to ${user['email']}\n";
-            echo shell_exec(__DIR__ . '/rmutt/bin/clickbait "' . $change['owner']['name'] . '" "' . $change['project'] . '" ' . date('Y'));
-            echo "####################################\n";
-
+            $message = shell_exec(
+                __DIR__
+                . '/rmutt/bin/clickbait "'
+                . $change['owner']['name']
+                . '" "' . $change['project']
+                . '" "' . date('Y')
+                . '" "' . ($change['insertions'] + $change['deletions']) . '"'
+            );
+            echo "\033c";
+            echo "\n\n";
+            echo "$message\n";
+            echo "- https://gerrit.wikimedia.org/r/#/q/${change['change_id']},n,z";
+            echo "\n\n";
+            sleep(5);
             $db['known'][$user['name']][] = $change['change_id'];
         }
     }
