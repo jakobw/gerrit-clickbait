@@ -7,5 +7,5 @@ Run
 ```
 cd rmutt
 npm install rmutt
-node bin/clickbait SUBMITTER REPONAME 
+node bin/clickbait SUBMITTER REPONAME YEAR 
 ```

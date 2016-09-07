@@ -1,6 +1,7 @@
 #! /usr/bin/env node
 var submitter = process.argv[2] ? process.argv[2] : 'NOSUBMITTER',
 	repo = process.argv[3] ? process.argv[3] : 'NOREPO',
+	year = process.argv[4] ? process.argv[4] : 'NOYEAR',
 	rmutt = require( 'rmutt' ),
 	fs = require( 'fs' ),
 	grammar;
@@ -12,6 +13,7 @@ grammar = fs.readFile( 'grammar/gerrit-submit-clickbait.rmutt', 'utf8', function
 
 	grammar = grammar.replace( /\{SUBMITTER\}/g, submitter );
 	grammar = grammar.replace( /\{REPO\}/g, repo );
+	grammar = grammar.replace( /\{YEAR\}/g, year );
 
 	rmutt.compile( grammar, function( err, result ) {
 		if ( err ) {
