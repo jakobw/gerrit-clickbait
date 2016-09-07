@@ -1,0 +1,30 @@
+#! /usr/bin/env node
+var submitter = process.argv[2] ? process.argv[2] : 'NOSUBMITTER',
+	repo = process.argv[3] ? process.argv[3] : 'NOREPO',
+	rmutt = require( 'rmutt' ),
+	fs = require( 'fs' ),
+	grammar;
+
+grammar = fs.readFile( 'grammar/gerrit-submit-clickbait.rmutt', 'utf8', function( err, grammar ) {
+	if ( err ) {
+		return console.log( err );
+	}
+
+	grammar = grammar.replace( /\{SUBMITTER\}/g, submitter );
+	grammar = grammar.replace( /\{REPO\}/g, repo );
+
+	rmutt.compile( grammar, function( err, result ) {
+		if ( err ) {
+			return console.log( err );
+		}
+
+		var expander = result.compiled;
+		expander( function( err, result ) {
+			if ( err ) {
+				return console.log( err );
+			}
+
+			console.log( result.expanded );
+		} );
+	} );
+} );

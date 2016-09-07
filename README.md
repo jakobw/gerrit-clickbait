@@ -1,11 +1,11 @@
 # Gerrit Clickbait
 
-## rmutt.js clickbait grammar
-See https://github.com/rstuven/rmutt.js/
+## Node.js clickbait script
+For grammar see https://github.com/rstuven/rmutt.js/
 
-To test on cli
+Run
 ```
 cd rmutt
 npm install rmutt
-node_modules/.bin/rmutt gerrit-clickbait.rmutt 
- ```
+node bin/clickbait SUBMITTER REPONAME 
+```

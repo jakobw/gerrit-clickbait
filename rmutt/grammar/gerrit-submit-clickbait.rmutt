@@ -1,13 +1,13 @@
-Output: clickBait ".\n";
+Output: submitClickBait ".\n";
 
-clickBait: var1, var2;
+submitClickBait: var1, var2;
 
-var1: m1_1 " what " adjective " " thingObject  " submitter " m1_2 " repo";
+var1: m1_1 " what " adjective " " thingObject  " {SUBMITTER} " m1_2 " {REPO}";
 
 m1_1: "You wont belive", "Hold on and see", "Unbeliveable", "Just crazy", "Everyone is exited about", "Test now", "Dont get mad about";
 m1_2: "did to", "changed in", "fixed in", "put in", "sneaked into";
 
-var2: "Submitter " m2_1 " repo and it " changePart;
+var2: "{SUBMITTER} " m2_1 " {REPO} and it " changePart;
 
 m2_1: "did " adjective " " thingObject " to";
 
@@ -17,4 +17,3 @@ thingObject: "stuff", "things";
 
 changes: "disrupt", "change", "revolutionize", "remake", "turn over";
 bigThing: "the world", "our thinking", "IT", "everything", "education", "society", "humanity", "your brain";
-
