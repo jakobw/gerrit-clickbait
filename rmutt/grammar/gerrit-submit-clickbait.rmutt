@@ -3,9 +3,12 @@ Output: preText submitClickBait;
 submitClickBait: var1, var2, fullTexts;
 
 preText:
-"The year {YEAR}: " 0.1,
-"Hey " animal " lovers! " 0.1,
-"BREAKING NEWS: " 0.1, "";
+"The year {YEAR}: ",
+"Hey " animal " lovers! ",
+"BREAKING NEWS: ",
+"INSANE! ",
+"Holy s***! ",
+ "" 0.2;
 
 var1: v1Starter " the " adjective " " thingObject  " {SUBMITTER} " v1Verb " {REPO}!";
 
@@ -38,7 +41,7 @@ adjective:
 "intelligent",
 "smart",
 "predictive",
-"some",
+"tiny",
 "crazy",
 "mental",
 "huge",
@@ -46,7 +49,12 @@ adjective:
 "fishy",
 "game-changing";
 
-thingObject: "stuff", "things";
+thingObject:
+"stuff",
+"things",
+"changes",
+"pile of code",
+"foobar" 0.05;
 
 changes:
 "disrupt",
