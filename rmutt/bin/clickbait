@@ -15,7 +15,12 @@ grammar = fs.readFile( __dirname + '/../grammar/gerrit-submit-clickbait.rmutt', 
 	grammar = grammar.replace( /\{SUBMITTER\}/g, submitter );
 	grammar = grammar.replace( /\{REPO\}/g, repo );
 	grammar = grammar.replace( /\{YEAR\}/g, year );
-	grammar = grammar.replace( /\{LOC\}/g, loc );
+	if( parseInt( loc ) < 2 ) {
+		grammar = grammar.replace( /\{LOC\}/g, 'few' );
+	} else {
+		grammar = grammar.replace( /\{LOC\}/g, loc );
+	}
+
 
 	rmutt.compile( grammar, function( err, result ) {
 		if ( err ) {
