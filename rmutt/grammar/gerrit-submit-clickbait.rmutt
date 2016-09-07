@@ -6,7 +6,7 @@ preText: "The year {YEAR}: " 0.1, "Hey " animal " lovers! " 0.1, "BREAKING NEWS:
 
 var1: m1_1 " the " adjective " " thingObject  " {SUBMITTER} " verb " {REPO}!";
 
-m1_1: "You wont belive", "Hold on and see", "Unbeliveable", "Just crazy", "Everyone is exited about", "Test now", "Dont get mad about";
+m1_1: "You wont belive", "Hold on and see", "Unbeliveable", "Just crazy", "Everyone is excited about", "Test now", "Dont get mad about";
 verb: "did to", "changed in", "fixed in", "put in", "sneaked into", "hacked in", "messed up in";
 
 var2: "{SUBMITTER} " m2_1 " {REPO} and it " changePart "!";
