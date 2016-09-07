@@ -4,7 +4,7 @@ submitClickBait: var1, var2;
 
 var1: m1_1 " what " adjective " " thingObject  " {SUBMITTER} " m1_2 " {REPO}";
 
-m1_1: "You wont believe", "Hold on and see", "Unbelieveable", "Just crazy", "Everyone is exited about", "Test now", "Dont get mad about";
+m1_1: "You wont believe", "Hold on and see", "Unbelieveable", "Just crazy", "Everyone is excited about", "Test now", "Don't get mad about";
 m1_2: "did to", "changed in", "fixed in", "put in", "sneaked into";
 
 var2: "{SUBMITTER} " m2_1 " {REPO} and it " changePart;
