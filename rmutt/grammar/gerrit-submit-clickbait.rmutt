@@ -1,6 +1,6 @@
 Output: preText submitClickBait;
 
-submitClickBait: var1, var2, fullTexts;
+submitClickBait: var1, var2, var3, fullTexts;
 
 preText:
 "The year {YEAR}: ",
@@ -10,7 +10,7 @@ preText:
 "Holy s***! ",
  "" 0.2;
 
-var1: v1Starter " the " adjective " " thingObject  " {SUBMITTER} " v1Verb " {REPO}!";
+var1: v1Starter " the " adjective " " thingObject " {SUBMITTER} " v1Verb " {REPO}!";
 
 v1Starter:
 "You wont believe",
@@ -34,11 +34,13 @@ v1Verb:
 "hacked in",
 "messed up in";
 
+var3: v1Starter " how these {LOC} " adjective " lines of code by {SUBMITTER} " changesVerb " {REPO}!";
+
 var2: "{SUBMITTER} " v2Verb " {REPO} and it " changePart "!";
 
 v2Verb: "did " adjective " " thingObject " to";
 
-changePart: "will " changes " " bigThing;
+changePart: "will " changesVerb " " bigThing;
 
 adjective:
 "big",
@@ -72,12 +74,16 @@ thingObject:
 "changes",
 "foobar" 0.05;
 
-changes:
+changesVerb:
 "disrupt",
 "change",
 "revolutionize",
 "remake",
-"turn over";
+"turn over",
+"improve",
+"reform",
+"amend",
+"finally fix";
 
 bigThing:
 "the world",
